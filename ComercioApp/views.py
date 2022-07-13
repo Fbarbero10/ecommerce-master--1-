@@ -24,8 +24,8 @@ def about(request):
 def productos(request):
     
     productos = Productos.objects.all()  #Nos traemos todos los cursos de la DB
-    return render(request,"comercioApp/productos.html",{"productos": productos})
-
+    contar = len(productos)
+    return render(request,"comercioApp/productos.html",{"productos": productos, "cantidad": contar})
 
 def empleados(request):
     
@@ -149,7 +149,7 @@ def ver_producto(request, producto_id):
 
   producto = Productos.objects.get(id=producto_id)
   
-  return render(request,"comercioApp/verProducto.html",{"producto":producto})
+  return render(request,"comercioApp/ver_producto.html",{"producto":producto})
 
 @staff_member_required
 def editar_producto(request,producto_id):
