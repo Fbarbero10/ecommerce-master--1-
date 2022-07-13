@@ -1,0 +1,84 @@
+{% extends './base.html'%} {% load static %}
+<!--titulo página-->
+{% block tituloPagina%} Sobre Nosotros {% endblock %}
+
+<!--Contenido-->
+{% block contenidoPagina %}
+
+<section class="container-fluid text-black text-center">
+  <h1><b>Sobre nosotros</b></h1>
+  <p class="mt-4">
+    Somos un grupo de estudiantes de Coderhouse iniciando nuestro camino en la
+    programación web, contamos con conocimientos en python y Django.
+  </p>
+</section>
+
+<section class="container-fluid">
+  <div class="card-group d-flex justify-content-around">
+
+<div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/media/avatar/francorodriguez.jpg" style="max-height: 500px;">
+      <div class="card-body">
+        <h5 class="card-title">Rodriguez Franco</h5>
+        <p class="card-text">
+          <p><b>Edad: </b>28</p>
+          <p><b>Profesión: </b>Lic. en Nutrición</p>
+          <p><b>Provincia: </b>Tucumán</p>
+          <p>
+            <b>Github: </b
+            ><a target="_blank" 
+            href="https://github.com/franrodriguez1993"
+              >https://github.com/franrodriguez1993</a
+            >
+          </p>
+        </p>
+      </div>
+    </div>
+
+
+  <!---->
+<div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/media/avatar/barbero.jpeg" style="max-height: 500px;">
+      <div class="card-body">
+        <h5 class="card-title">Barbero Franco</h5>
+        <p class="card-text">
+          <p><b>Edad: </b>27</p>
+          <p><b>Profesión: </b>Analista en sistemas de información</p>
+          <p><b>Provincia: </b>Córdoba</p>
+          <p>
+            <b>Github: </b
+            ><a target="_blank" 
+            href="https://github.com/Fbarbero10"
+              >https://github.com/Fbarbero10</a
+            >
+          </p>
+        </p>
+      </div>
+    </div>
+
+<div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/media/avatar/trenado.jpeg" style="max-height: 500px;">
+      <div class="card-body">
+        <h5 class="card-title">Trenado Franco</h5>
+        <p class="card-text">
+          <p><b>Edad: </b>21</p>
+          <p><b>Profesión: </b>Estudiante de programación</p>
+          <p><b>Provincia: </b>CABA - Buenos Aires</p>
+          <p>
+            <b>Github: </b
+            ><a target="_blank" 
+            href="https://github.com/FranSamaa"
+              >https://github.com/FranSamaa</a
+            >
+          </p>
+        </p>
+      </div>
+    </div>
+
+
+
+    <!----->
+  </div>
+</section>
+
+{%endblock%}
