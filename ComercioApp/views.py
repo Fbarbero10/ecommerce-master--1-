@@ -11,8 +11,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
-
-
+from django.contrib import messages
 # Create your views here.
 
 def inicio(request):
@@ -268,18 +267,20 @@ def login_request(request):
             password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=password)
 
+
             if user is not None:
                 login(request, user)
                 return redirect("inicio")
             else:
                 return redirect("login")
         else:
+            messages.info(request, 'Datos inválidos')
             return redirect("login")
 
     form = AuthenticationForm()
 
     return render(request,"comercioApp/login.html",{"form":form})
-
+    
 def register_request(request):
 
     if request.method == "POST":
